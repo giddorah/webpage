@@ -25,6 +25,9 @@ img:hover {
 p {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     color: darkgray;
+    text-align: center;
+    vertical-align: center;
+    float: center;
 }
 
 .SiteTable {
@@ -127,4 +130,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 .time{
     font-family: Courier New, Courier, monospace;
+}
+
+form{
+    text-align: center;
+    vertical-align: center;
+    float: center;
+    color: darkgray;
 }

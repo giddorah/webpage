@@ -1,0 +1,44 @@
+<!doctype HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/main.js"> </script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="TimeFunction()">
+    <div class="SiteTable">
+        <div class="Row">
+            <div class="BannerCell">
+                <p> <img src="img/Loga.png" width="40%" height="40%" alt="Logotype"> </p>
+            </div>
+        </div>
+
+
+    <div class="Row">
+        <div class="MenuCell">
+            <button class="menuButton" onclick="location.href='index.html'">Home</button>
+            <button class="menuButton" onclick="location.href='games.html'">Games</button>
+            <button class="menuButton" onclick="location.href='about.html'">About</button>
+            <button class="menuButton" onclick="location.href='contact.html'">Contact</button>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="ContentCell">
+            <form action="contactMessage.html" method="">
+                Name: <input type="text" name="name" size="25"><br>
+                Email: <input type="email" name="email" size="25" /><br>
+                Comment:<br> <textarea name="myTextBox" cols="50" rows="5"> </textarea> <br>
+                <input type="submit" value="Send" />
+                <input type="reset" name="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="FooterCell">
+            <p class="time" id="timerAmPm">  </p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
