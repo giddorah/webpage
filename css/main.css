@@ -93,3 +93,7 @@ p {
     width: 150px;
     padding: 0px;
 }
+
+.time{
+    font-family: Courier New, Courier, monospace;
+}
