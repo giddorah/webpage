@@ -10,6 +10,11 @@ function TimeFunction()
         minutes = "0" + minutes;
     }
 
+    if(seconds < 10)
+    {
+        seconds = "0" + seconds;
+    }
+
     var timerAmPm = hours + ":" + minutes + ":" + seconds + " ";
 
     if(hours > 11){
@@ -18,9 +23,17 @@ function TimeFunction()
     else {
         timerAmPm += "AM";
     }
-    if(seconds == 10) timerAmPm = "korv";
+    if(seconds == 10) timerAmPm = "korv o bröd";
+    timerAmPm += "   " + DateGetter();
     document.getElementById("timerAmPm").innerHTML = timerAmPm;
-
-
 }
 setInterval(TimeFunction, 1000);
+
+function DateGetter(){
+    var date = new Date();
+    dayOfTheMonth = date.getDate();
+    month = date.getMonth()+1;
+    year = date.getFullYear();
+    var stringDate = " " + year + "/" + month + "/" + dayOfTheMonth;
+    return stringDate;
+}
