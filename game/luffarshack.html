@@ -5,9 +5,30 @@
     <title> Luffarschack </title>
 <link rel="stylesheet" href="css/css.css"/>
 <script src="js/luffarJavascript.js"></script>
+<script type="text/javascript" src="../js/main.js"> </script>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-<body id="BackgroundImageBlue" onload="resetGame()">
-     <h1 class="center"><script> document.write(myColorFunction("Välkommen till Luddes luffarschack v1.0"))</script> </h1>
+
+<body onload="TimeFunction(); resetGame();">
+    <div class="SiteTable">
+        <div class="Row">
+            <div class="BannerCell">
+                <p style="text-align: center"> <img src="../img/Loga.png" width="40%" height="40%" alt="Logotype"> </p>
+            </div>
+        </div>
+
+
+    <div class="Row">
+        <div class="MenuCell">
+            <button class="menuButton" onclick="location.href='../index.html'">Home</button>
+            <button class="menuButton" onclick="location.href='../games.html'">Games</button>
+            <button class="menuButton" onclick="location.href='../about.html'">About</button>
+            <button class="menuButton" onclick="location.href='../contact.html'">Contact</button>
+        </div>
+    </div>
+        <div class="Row">
+            <div class="ContentCell">
+                <h1 class="center"><script> document.write(myColorFunction("Välkommen till Gammas luffarschack v1.0"))</script> </h1>
     <h5 id="status11"> </h5>
     <h5 id="status12"> </h5>
      
@@ -29,9 +50,13 @@
 <th><button onclick="pick(9)"><h4  id="status9"> </h4> </button></th> </tr>
   
  </table>
-
-
-
-
+            </div>
+        </div>
+        <div class="Row">
+            <div class="FooterCell">
+                <p class="time" id="timerAmPm">  </p>
+            </div>
+        </div>
+    </div>
 </body>
  </html>
