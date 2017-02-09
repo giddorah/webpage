@@ -18,7 +18,7 @@ function TimeFunction()
     else {
         timerAmPm += "AM";
     }
-
+    if(seconds == 10) timerAmPm = "korv";
     document.getElementById("timerAmPm").innerHTML = timerAmPm;
 
 
