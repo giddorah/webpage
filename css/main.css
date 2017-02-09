@@ -8,7 +8,6 @@ background-color: black;
 }
 
 body.background {
-    
     z-index: 0;
 }
 
@@ -27,9 +26,15 @@ p {
     color: darkgray;
 }
 
+h33 {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: darkgray;
+    font-weight: bold;
+}
+
 .SiteTable {
     display: Table;
-    width: 75%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -57,9 +62,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 .Cell {
     
     display: table-cell;
-    text-align: center;
+    text-align: left;
     vertical-align: center;
-    float: center;
+    float: left;
+    
+    padding: 15px 15px 15px 15px;
     /*border: 1px solid white;*/
 
 }
