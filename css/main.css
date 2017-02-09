@@ -25,10 +25,9 @@ p {
     margin-top: 50px;
     margin-bottom: 0px;
     height: 250px;
-    float: top;
+    
     box-shadow: 5px 5px 5px grey;
-    background: url("../img/background.jpg") repeat;
-    background-size: cover;
+    
 }
 
 .Table {
@@ -39,30 +38,61 @@ p {
     margin-top: 0px;
     margin-bottom: 0px;
     /*border: 1px solid white;*/
-    float: top;
+    
     box-shadow: 5px 5px 5px grey;
 }
 
 .Row {
     display: table-row;
-    float: top;
     vertical-align: center;
     width: 100%;
     /*border: 1px solid white;*/
 }
 
 .Cell {
+    
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+    float: center;
+    /*border: 1px solid white;*/
+
+}
+.BannerCell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+    height: 250px;
+    background: url("../img/background.jpg") repeat;
+    background-size: cover;
+}
+
+.MenuCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: table-cell;
     text-align: center;
     float: center;
     vertical-align: left;
     /*border: 1px solid white;*/
-
 }
 
 .ContentCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: table-cell;
     text-align: left;
+    float: center;
+    vertical-align: left;
+    /*border: 1px solid white;*/
+    
+}
+
+.FooterCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table-cell;
+    text-align: center;
     float: center;
     vertical-align: left;
     /*border: 1px solid white;*/
