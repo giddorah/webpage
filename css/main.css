@@ -90,8 +90,22 @@ p {
 
 .menuButton {
     float: center;
+    border: none;
+    height: 50px;
     width: 150px;
     padding: 0px;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+    background-color: darkgrey
+}
+
+.menuButton:hover {
+    float: center;
+    width: 150px;
+    padding: 0px;
+    border-radius: 15px;
+    background-color: lightgray;
+    box-shadow: 0px 5px 15px darkslategrey;
 }
 
 .time{
