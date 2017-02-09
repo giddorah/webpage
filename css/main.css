@@ -1,3 +1,110 @@
+* {
+margin: 0;
+}
+
+html, body {
+background-size: cover;
+background-color: black;
+}
+
+body.background {
+    
+    z-index: 0;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: white;
+}
+
+.SiteTable {
+    display: Table;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    height: 250px;
+    
+    box-shadow: 5px 5px 5px grey;
+    
+}
+
+.Table {
+    display: Table;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*border: 1px solid white;*/
+    
+    box-shadow: 5px 5px 5px grey;
+}
+
+.Row {
+    display: table-row;
+    vertical-align: center;
+    width: 100%;
+    /*border: 1px solid white;*/
+}
+
+.Cell {
+    
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+    float: center;
+    /*border: 1px solid white;*/
+
+}
+.BannerCell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+    height: 250px;
+    background: url("../img/background.jpg") repeat;
+    background-size: cover;
+}
+
+.MenuCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table-cell;
+    text-align: center;
+    float: center;
+    vertical-align: left;
+    /*border: 1px solid white;*/
+}
+
+.ContentCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table-cell;
+    text-align: left;
+    float: center;
+    vertical-align: left;
+    /*border: 1px solid white;*/
+    
+}
+
+.FooterCell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table-cell;
+    text-align: center;
+    float: center;
+    vertical-align: left;
+    /*border: 1px solid white;*/
+    
+}
+
+.menuButton {
+    float: center;
+    width: 150px;
+    padding: 0px;
+}
+
 .time{
     font-family: Courier New, Courier, monospace;
 }
