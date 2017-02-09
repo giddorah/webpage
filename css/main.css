@@ -12,6 +12,16 @@ body.background {
     z-index: 0;
 }
 
+img {
+    opacity: 0.5;
+    transition-duration: 5s;
+}
+
+img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 5px yellow;
+}
+
 p {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     color: darkgray;
@@ -110,10 +120,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 }
 
 .menuButton:hover {
-    float: center;
-    width: 150px;
-    padding: 0px;
-    border-radius: 15px;
     background-color: lightgray;
     box-shadow: 0px 5px 15px darkslategrey;
     border: dotted white;
