@@ -230,11 +230,12 @@ else if(counter == 9)
 }
 
 }
-
+// Funktion för att sätta olika färger på en text.
 function myColorFunction(word) {
     var colors = ["darkred", "orange", "yellow", "green", "blue", "purple" ];
 
     var styler = "";
+    // Sätter en slumpmässig färg om "word" bara innehåller ett tecken.
     if(word.length == 1)
     {
     var korv = Math.floor((Math.random() * 6) + 1);
@@ -246,7 +247,8 @@ function myColorFunction(word) {
    
 for (var i = 0; i < word.length; i++)
 {
-    styler += word[i].fontcolor(colors[i - (colors.length * Math.floor(i / colors.length))]) // It does stuff
+    styler += word[i].fontcolor(colors[i - (colors.length * Math.floor(i / colors.length))]) // Ser till så att colors "resettas"
+    // så att man kan fortsätta att sätta färger på bokstäverna.
 }
   word = styler;
             
