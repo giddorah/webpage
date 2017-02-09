@@ -241,7 +241,10 @@ a.control_next {
 
 .hidden-scrollbar {
   color:transparent;  
+  
   overflow:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   text-align:justify;  
   opacity: 1;
   position: fixed;
@@ -281,8 +284,8 @@ to {background-position: -3840px 0;}
   width: 100vw;  
 height: 100vh;  
 top: -5%;
-left: -5%;
 z-index: 0;
+position: fixed;
 background: url(../img/newback.jpg) repeat-y;  
 -webkit-animation: backgroundScroll 120s linear infinite;
 animation: backgroundScroll 120s linear infinite;
