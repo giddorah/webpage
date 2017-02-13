@@ -93,7 +93,7 @@ filter: none;
     /*background: url("../img/background.jpg") repeat;
     background-size: cover;*/
     border-radius: 15px 15px 0px 0px;
-
+    
 z-index: 5;
 }
 
@@ -298,17 +298,20 @@ div.list div.listcell {
     padding-bottom: 10px;
     text-align: center;
     font-weight: bold;
+    transition-duration: 0.4s;
 }
 div.list div.listcell a{
     padding: 5px;
     display: block;
     color: white;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 .selected{
     background-color: darkgray; 
 }
 
 div.list div.listcell:hover{
-    background-color: gray;
+        background-color: lightgray;
+    box-shadow: 0px 5px 15px darkslategrey;
 }
