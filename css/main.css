@@ -180,6 +180,7 @@ form{
 
 #slider ul li {
   position: relative;
+  color: black;
   display: block;
   float: left;
   margin: 0;
