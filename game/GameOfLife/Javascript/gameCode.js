@@ -41,7 +41,9 @@ function fieldSetup(){
 
 function changeSize(){
     width = parseInt(document.getElementById("width").value);
+    if(width > 54) width = 54;
     height = parseInt(document.getElementById("height").value);
+    if(height > 21) height = 21;
     halfway = height*width/2;
     if(height%2==0) 
         halfway+=(width/2);
