@@ -278,15 +278,15 @@ to {background-position: -3840px 0;}
   -o-filter: blur(15px);
   -ms-filter: blur(15px);
   filter: blur(15px);
-  width: 100vw;  
-height: 100vh;  
+  width: 110vw;  
+height: 110vh;  
 top: -5%;
+left: -5%;
 z-index: 0;
 position: fixed;
 background: url(../img/newback.jpg) repeat-y;  
 -webkit-animation: backgroundScroll 120s linear infinite;
 animation: backgroundScroll 120s linear infinite;
-
 }
 
 div.list{
