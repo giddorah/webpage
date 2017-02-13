@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+    <meta charset="utf-8">
+    <title> Game of Life </title>
+    <script type="text/javascript" src="Javascript/gameCode.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="CSS/game.css">
+</head>
+
+<body onload="fieldSetup(); buttonSetup(); TimeFunction(); resetGame() ">
+
+      <div class="background"></div>
+    <div class='hidden-scrollbar'>
+    <div class='inner'>
+    <div class="SiteTable">
+        <div class="Row">
+            <div class="BannerCell">
+                <p style="text-align: center"><img src="../../img/Loga.png" width="100%" alt="Logotype"> </p>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class=" listcell" onclick="location.href='index.html'"> <a href="../../index.html"> Home </a> </div>
+            <div class=" listcell selected" onclick="location.href='games.html'"> <a href="../../games.html"> Games </a></div>
+            <div class=" listcell" onclick="location.href='about.html'"> <a href="../../about.html"> About </a> </div>
+            <div class=" listcell" onclick="location.href='contact.html'"> <a href="../../contact.html"> Contact </a> </div>
+        </div>
+        <br>
+        <div class="Row">
+            <div class="ContentCell">
+            <h2> Conway's Game of Life </h2>
+                
+            <div id="field"></div>
+
+        <div class="tableNoBorder">
+            <div class="row">
+                <input type="button" id="Disable1" value="Slower" onclick="slower()">
+                <div class="cell" id="speed"> </div>
+                <input type="button" id="Disable2" value="Faster" onclick="faster()">         
+                <input type="button" value="Preset1" onclick="preset3()">
+                <input type="button" value="Preset2" onclick="preset5()">
+                <input type="button" value="Preset3" onclick="preset7()">
+                <input type="button" id="Disable3" value="◄" onclick="lastMove()">
+                <input type="button" class="startButton" value="Start" onclick="start()">
+                <input type="button" id="Disable4" value="►" onclick="nextMove()">         
+                <input type="button" value="Preset4" onclick="preset2()">
+                <input type="button" value="Preset5" onclick="preset6()">
+                <input type="button" value="Preset6" onclick="preset1()">
+                <input type="button" value="Preset7" onclick="preset4()">
+                <input type="button" value="Preset8" onclick="preset8()">            
+                <input type="button" id="Disable5" value="Clear" onclick="clearAll()">
+                <input type="button" id="Disable5" value="Inverse" onclick="inverse()">
+            </div>
+        <h4 id="generation">generation: 0</h4>
+            <h4> width: </h4> <input type="text" name="inputbox" maxlength="2" size="3" id="width">
+            <h4> height:</h4> <input type="text" name="inputbox" maxlength="2" size="3" id="height">
+            <input type="button" id="Disable6" value="Change size" onclick="changeSize()">
+        </div>
+            
+        </div>  
+        </div>
+                
+            </div>
+        </div>
+        <div class="Row">
+            <div class="FooterCell">
+                <p class="time" id="timerAmPm">  </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    </div>
+            </div>
+            
+</body>
+ </html>
