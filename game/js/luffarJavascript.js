@@ -16,6 +16,7 @@ var node8 = "?";
 var node9 = "?";
 function resetGame()
 {
+    //Resetar spelet, alla nodes blir "?" och fylls i med en slumpmässig vald färg.
 counter = 0;
   node1 = "?";
   node2 = "?";
@@ -40,7 +41,7 @@ status10.innerHTML = myColorFunction(whoIsThePlayer);
 function pick(choice){
    
    
-
+//Funktion för att sätta ut en spelare på en utav alla nodes beroende på vart man har klickat.
 
 var status1 = document.getElementById("status1");
 var status2 = document.getElementById("status2");
@@ -57,7 +58,8 @@ var status12 = document.getElementById("status12");
 
 
 
-
+//If satser för att se till så att en spelare inte kan klicka på en node som någon spelare redan äger.
+// Lyckas man sätta ut sin markör så byter den sedan spelare och plussar på counter.
 if(choice == 1 && node1 != "X" && node1 != "O"){
     whoIsThePlayer = "Turn: " + player;
         if(player == "X")
@@ -203,26 +205,30 @@ checkIfWin();
 
 }
 function checkIfWin(){
+    // Kollar om player X har vunnit.
 if(node1 == "X" && node2 == "X" && node3 == "X" || node4 == "X" && node5 == "X" && node6 == "X" ||
 node7 == "X" && node8 == "X" && node9 == "X" || node1 == "X" && node4 == "X" && node7 == "X" ||
  node2 == "X" && node5 == "X" && node8 == "X"|| node3 == "X" && node6 == "X" && node9 == "X" ||
 node1 == "X" && node5 == "X" &&  node9 == "X"|| node3 == "X" && node5 == "X" && node7 == "X"){
     window.alert("Player: " + player + " wins!");
+    // Lägger till en win för player X.
     playerXWins++;
      
     xWIN = "Wins by X: " + playerXWins;
     resetGame();
 }
+//Kollar om player O har vunnit.
 if(node1 == "O" && node2 == "O" && node3 == "O" || node4 == "O" && node5 == "O" && node6 == "O" ||
 node7 == "O" && node8 == "O" && node9 == "O" || node1 == "O" && node4 == "O" && node7 == "O" ||
  node2 == "O" && node5 == "O" && node8 == "O"|| node3 == "O" && node6 == "O" && node9 == "O" ||
 node1 == "O" && node5 == "O" &&  node9 == "O"|| node3 == "O" && node5 == "O" && node7 == "O"){
     window.alert("Player: " + player + " wins!");
+     // Lägger till en win för player O.
     playerOWins++;
     oWIN = "Wins by O: " + playerOWins;
     resetGame();
 }
-
+// Counter plussas på i pick funktionen, når den 9 så är det en draw och spelet resetas.
 else if(counter == 9)
 {
     window.alert("DRAW!");
