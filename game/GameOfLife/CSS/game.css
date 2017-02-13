@@ -1,0 +1,39 @@
+body{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-size: cover;
+    color: white;
+}
+h4{
+    color: white;
+}
+.table{
+    display: table;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+    display: table-row;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.cell{
+    display: table-cell;    
+}
+.button{
+    background-color:lightgray;
+    height:20px;
+    width: 20px;
+}
+
+.startButton{
+width: 50px;
+}
