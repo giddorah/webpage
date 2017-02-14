@@ -33,6 +33,8 @@ function lose() {
     if (bankroll <= 1)
     {
         bankroll = 0;
+        Alert("You lost everything.");
+        stay();
     }
     else
     {
