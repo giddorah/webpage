@@ -30,10 +30,10 @@ function win() {
 }
 
 function lose() {
-    if (bankroll <= 1)
+    if (bankroll == 1.25)
     {
         bankroll = 0;
-        Alert("You lost everything.");
+        alert("You lost everything.");
         stay();
     }
     else
