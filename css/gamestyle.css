@@ -1,0 +1,20 @@
+button {
+    width: 150px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    align-self: auto;
+}
+
+button.go {
+    background-color: lawngreen;
+}
+
+button.stay {
+    background-color: red;
+}
+
+.bankrollstyle {
+    color: white;
+}

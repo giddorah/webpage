@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/goc.js"> </script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gamestyle.css">
+</head>
+
+<body onload="TimeFunction()">
+<div class="background"></div>
+    <div class='hidden-scrollbar'>
+    <div class='inner'>
+    <div class="SiteTable">
+        <div class="Row">
+            <div class="BannerCell">
+                <p style="text-align: center"><img src="../../img/Loga.png" width="100%" alt="Logotype"> </p>
+            </div>
+        </div>
+        <div class="list">
+            <div class=" listcell" onclick="location.href='../../index.html'"> <a href="../../index.html"> Home </a> </div>
+            <div class=" listcell selected" onclick="location.href='../../games.html'"> <a href="../../games.html"> Games </a></div>
+            <div class=" listcell" onclick="location.href='../../about.html'"> <a href="../../about.html"> About </a> </div>
+            <div class=" listcell" onclick="location.href='../../contact.html'"> <a href="../../contact.html"> Contact </a> </div>
+        </div> 
+        <div class="Row">
+            <div class="ContentCell">
+                <br>
+                <button class="go" onclick="bet()">Go</button>
+                <button class="stay" onclick="stay()">Stay</button>
+                <br>
+                <p> You have: </p><div class="bankrollstyle" id="bankroll">5</div><p> kronors </p>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="FooterCell">
+                <p class="time" id="timerAmPm">  </p>
+            </div>
+        </div>
+    </div>
+        <br><br>
+    </div>
+    </div>
+    
+</body>
+</html>
