@@ -15,10 +15,12 @@ function stay() {
     {
         highscore = bankroll;
         bankroll = 10;
+        /*document.cookie = highscore;*/
     }
     else
     {
         bankroll = 10;
+        /*readCookie();*/
     }
     mainGame();
 }
@@ -45,3 +47,10 @@ function draw() {
     }
     mainGame();
 }
+
+
+/*
+function readCookie() {
+    highscore = document.cookie;
+}
+*/
