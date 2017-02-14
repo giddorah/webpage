@@ -5,6 +5,11 @@ button {
     border: none;
     color: white;
     align-self: auto;
+    transition-duration: 0.8s;
+}
+
+button:hover {
+    border: 3px dotted white;
 }
 
 button.go {
@@ -14,6 +19,10 @@ button.go {
 button.stay {
     background-color: red;
 }
+
+
+
+
 
 .bankrollstyle {
     color: white;
