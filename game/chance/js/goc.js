@@ -30,7 +30,14 @@ function win() {
 }
 
 function lose() {
+    if (bankroll <= 1)
+    {
+        bankroll = 0;
+    }
+    else
+    {
     bankroll = bankroll /2;
+    }
 }
 
 function draw() {
