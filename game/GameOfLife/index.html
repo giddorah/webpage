@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="CSS/game.css">
 </head>
 
+<!--när programet laddas så anropas fieldSetup, buttonSetup och timerAmPm-->
 <body onload="fieldSetup(); buttonSetup(); TimeFunction()">
-
       <div class="background"></div>
     <div class='hidden-scrollbar'>
     <div class='inner'>
@@ -20,7 +20,6 @@
                 <p style="text-align: center"><img src="../../img/Loga.png" width="100%" alt="Logotype"> </p>
             </div>
         </div>
-
         <div class="list">
             <div class=" listcell" onclick="location.href='../../index.html'"> Home </div>
             <div class=" listcell selected" onclick="location.href='../../games.html'"> Games </div>
@@ -31,11 +30,13 @@
         <div class="Row">
             <div class="ContentCell">
             <h2 style="color: white; text-align: center" > Conway's Game of Life </h2>
-                
+            <!--här kommer fältet att skapas med hjälp av javascript.
+             Att den skapas via javascript och inte direkt i html är för att den ska kunna ändras i storlek-->
             <div id="field"></div>
-
         <div class="tableNoBorder">
             <div class="row">
+                <!-- Har skapas knapparna de som har id som börjar med disable kommer att inaktiveras under körning -->
+                <!-- knapparna som börjar med preset ger förutbestämda värden till fältet -->
                 <input type="button" id="Disable1" value="Slower" onclick="slower()">
                 <div class="cell" id="speed"> </div>
                 <input type="button" id="Disable2" value="Faster" onclick="faster()">         
@@ -52,7 +53,9 @@
                 <input type="button" value="Preset8" onclick="preset8()">            
                 <input type="button" id="Disable5" value="Clear" onclick="clearAll()">
             </div>
-        <h4 id="generation">generation: 0</h4>
+            <!-- här vissas hur många generationer som har körts -->
+            <h4 id="generation">generation: 0</h4>
+            <!-- här kan användaren ändra stolek på fältet -->
             <h4> width: </h4> <input type="text" name="inputbox" maxlength="2" size="3" id="width">
             <h4> height:</h4> <input type="text" name="inputbox" maxlength="2" size="3" id="height">
             <input type="button" id="Disable6" value="Change size" onclick="changeSize()">

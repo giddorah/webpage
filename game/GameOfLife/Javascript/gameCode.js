@@ -1,5 +1,8 @@
+// Här skapas variablerna för storleken av fältet
 var width = 54;
 var height = 21;
+// variablen halfway används av presets som utgångspunkt för var den ska placera ut rutor.
+// Den har skydd så att den alltid utgår fron mitten av skärmen och alltid är heltal.
 var halfway = height*width/2;
 if(height%2==0) 
     halfway+=(width/2);
@@ -7,11 +10,20 @@ if(2*halfway%2!=0)
      halfway -= 0.5;
 // var width = 5;
 // var height = 5;
+
+// Arrayn count håller reda på värdena av alla rutor
 var count = new Array(width*height);
+
+// Håller reda på  alla tidigare genererationer
 var allPrevious = new Array(new Array(1), new Array(width*height));
 var previouses = 1;
+
+// hastigheten spelet körs när man trycker start
 var speed = 450;
+
+// hastigheten som vissas
 var userSpeed = 6;
+
 var started = false;
 var generations = 0;
 
@@ -20,6 +32,7 @@ for (var i = 0; i<count.length; i++){
     allPrevious[0][i] = 0;
 }
 
+//här skapas spelfältet
 function fieldSetup(){
     document.getElementById("speed").innerHTML = "speed: " + userSpeed;
     document.getElementById("width").value = width;
@@ -39,6 +52,7 @@ function fieldSetup(){
     document.getElementById("field").innerHTML = element;
 }
 
+// ändrar storleken på spelfältet
 function changeSize(){
     width = parseInt(document.getElementById("width").value);
     if(width > 54) width = 54;
@@ -56,6 +70,7 @@ function changeSize(){
     clearAll();
 }
 
+// här skapas rutorna i spelfältet
 function buttonSetup(){
     for(i = 0; i<count.length; i++){
         var element = '<input type="button" class="button" id="';
@@ -68,6 +83,7 @@ function buttonSetup(){
     }    
 }
 
+// här ändras färgen i rutorna
 function setColor(buttonNumber){
     var element = document.getElementById(buttonNumber);
     if (count[buttonNumber-1] == 1){
@@ -80,6 +96,9 @@ function setColor(buttonNumber){
     }
 }
 
+
+// Här görs varje "steg" när man trycker framåt eller startar spelet.
+// Den ska inte göra något om det inte varit någon förändring
 function nextMove(){
     var isEqual = true;
     for(var i = 0; i<count.length;i++){
@@ -162,6 +181,7 @@ function nextMove(){
     }
 }
 
+// Om man går tillbaka ett steg till ett tidigare skede.
 function lastMove(){
     --generations;
     if(generations < 0) generations = 0;
@@ -176,6 +196,7 @@ function lastMove(){
         clearAll();
 }
 
+// start funktionen
 function start(){
     started = !started;
     changeButtons();
@@ -186,6 +207,7 @@ function start(){
     }
 }
 
+// det som sköter att knapparna inaktiveras när man startar.
 function changeButtons(){
     var starter = document.getElementsByClassName("startButton");
     if(started) starter[0].setAttribute("value", "Stop");
@@ -201,6 +223,7 @@ function changeButtons(){
     }
 }
 
+// höjer hastigheten
 function faster(){
     if(speed>1050)speed-=500;
     else speed-=150;
@@ -212,6 +235,7 @@ function faster(){
     console.log("faster " + speed);
 }
 
+// sänker hastigheten
 function slower(){
     if(speed>=1050)speed+=500;
     else speed+=150;
@@ -223,12 +247,15 @@ function slower(){
     console.log("slower " + speed);
 }
 
+
+// inverterar alla rutor, används ej
 function inverse(){
     for(i = 0; i < count.length; i++){
         setColor(i+1);
     }
 }
 
+// Tömmer fältet och återställer allt
 function clearAll(){
     for(i = 0; i < count.length; i++){
             count[i]=1
@@ -240,6 +267,7 @@ function clearAll(){
             document.getElementById("generation").innerHTML = "generation: " + generations;
 }
 
+// Alla förinställda fält positioner
 function preset1(){
     clearAll();
     for (var i = 0; i<count.length; i++){
