@@ -53,12 +53,29 @@
                 <input type="button" value="Preset8" onclick="preset8()">            
                 <input type="button" id="Disable5" value="Clear" onclick="clearAll()">
             </div>
-            <!-- här vissas hur många generationer som har körts -->
-            <h4 id="generation">generation: 0</h4>
-            <!-- här kan användaren ändra stolek på fältet -->
-            <h4> width: </h4> <input type="text" name="inputbox" maxlength="2" size="3" id="width">
-            <h4> height:</h4> <input type="text" name="inputbox" maxlength="2" size="3" id="height">
-            <input type="button" id="Disable6" value="Change size" onclick="changeSize()">
+            </div>
+            <div class="tableNoBorder">
+            <div class="row">
+                <!-- här vissas hur många generationer som har körts -->
+                <div class="cell"> <h4 id="generation">generation: 0</h4></div>
+            </div>
+             <div class="row">
+                <!-- här kan användaren ändra stolek på fältet -->
+                <div class="cell"> <h4> width: </h4> </div>
+                <div class="cell"> <input type="text" name="inputbox" maxlength="2" size="3" id="width"></div>
+                <div class="cell"> <h4> height: </h4> </div>
+                <div class="cell"> <input type="text" name="inputbox" maxlength="2" size="3" id="height"></div>
+                <div class="cell"> <input type="button" id="Disable6" value="Change size" onclick="changeSize()"></div>
+             </div>
+                <div class="row">
+                <div class="cell"> <h4> mouse width: </h4> </div>
+                <div class="cell"> <input type="text" name="inputbox" maxlength="3" size="3" id="MouseWidth"></div>
+                <div class="cell"> <h4> mouse height: </h4> </div>
+                <div class="cell"> <input type="text" name="inputbox" maxlength="3" size="3" id="MouseHeight"></div>
+                <div class="cell"> <input type="button" value="Change size" onclick="setMouseSize()"></div>
+                </div>
+            </div>
+            </div>
         </div>
             
         </div>  

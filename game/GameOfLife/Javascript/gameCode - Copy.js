@@ -10,8 +10,8 @@ if(2*halfway%2!=0)
      halfway -= 0.5;
 // var width = 5;
 // var height = 5;
-var mouseWidth = 5;
-var mouseHeight = 5;
+var mouseWidth = 10;
+var mouseHeight = 10;
 // Arrayn count håller reda på värdena av alla rutor
 var count = new Array(width*height);
 
@@ -38,8 +38,6 @@ function fieldSetup(){
     document.getElementById("speed").innerHTML = "speed: " + userSpeed;
     document.getElementById("width").value = width;
     document.getElementById("height").value = height;
-    document.getElementById("MouseWidth").value = mouseWidth;
-    document.getElementById("MouseHeight").value = mouseHeight;
     changeButtons();
     var element = '<div class="table">';
     for(var i = 0; i<height; i++){
@@ -60,7 +58,7 @@ function buttonSetup(){
     for(i = 0; i<count.length; i++){
         var element = '<input type="button" class="button" id="';
         element += i+1; 
-        element +='" style= "color:lightgray" onclick="buttonPress(';
+        element +='" style= "color:lightgray" onclick="setColor(';
         element += i+1;
         element += ')">';
         var id = "button"+(i+1);
@@ -91,32 +89,25 @@ function setMouseSize(){
     mouseHeight = parseInt(document.getElementById("MouseHeight").value);
 }
 
-function buttonPress(buttonNumber){
-    var currentButton = buttonNumber-2;
-    var tempWidth = mouseWidth;
-    for(var i = 0; i<mouseHeight; i++){
-        for(var j = 0; j<tempWidth; j++){
-            currentButton++;
-            setColor(currentButton+1);
-            if(currentButton%width==width-1) {
-                tempWidth = j+1; 
-            }
-        }      
-        currentButton += width-tempWidth;
-        if (currentButton>=height*width) i = mouseHeight;
-    }
-}
-
 // här ändras färgen i rutorna
 function setColor(buttonNumber){
-    var element = document.getElementById(buttonNumber);
-    if (count[buttonNumber-1] == 1){
-        element.style.backgroundColor = "lightgray";   
-        count[buttonNumber-1]=0;    
-    }
-    else{
-        element.style.backgroundColor = "black";
-        count[buttonNumber-1]=1; 
+    var currentButton = buttonNumber-2;
+    for(var i = 0; i<=mouseHeight; i++){
+        for(var j = 0; j<=mouseWidth; j++){
+            currentButton++;
+            var element = document.getElementById(currentButton+1);
+            if (count[currentButton] == 1){
+                element.style.backgroundColor = "lightgray";   
+                count[currentButton]=0;    
+            }
+            else{
+                element.style.backgroundColor = "black";
+                count[currentButton]=1; 
+            }
+            if(currentButton+1%width==width-1) j = mouseWidth; 
+        }      
+        currentButton += width-mouseWidth-1;
+        if (currentButton>=height*width) i = mouseHeight;
     }
 }
 
@@ -280,10 +271,16 @@ function inverse(){
 
 // Tömmer fältet och återställer allt
 function clearAll(){
+    var tempWidth = mouseWidth;
+    mouseWidth=0;
+    var tempHeight = mouseHeight;
+    mouseHeight=0;
     for(var i = 0; i < count.length; i++){
             count[i]=1
             setColor(i+1)           
     }
+            mouseWidth = tempWidth;
+            mouseHeight = tempHeight;
             allPrevious = new Array(new Array(1), new Array(width*height));
             previouses = 1;
             generations = 0
