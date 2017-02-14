@@ -7,41 +7,50 @@
 </head>
 
 <body onload="TimeFunction()">
-<div class="background"></div>
+    <div class="background"></div>
         <div class='hidden-scrollbar'>
-    <div class='inner'>
-    <div class="SiteTable">
-        <div class="Row">
-            <div class="BannerCell">
-                <p style="text-align: center"> <img src="img/Loga.png" width="100%" alt="Logotype"> </p>
+            <div class='inner'>
+                <div class="SiteTable">
+                    <div class="Row">
+                        <div class="BannerCell">
+                            <p style="text-align: center"> <img src="img/Loga.png" width="100%" alt="Logotype"> </p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class=" listcell" onclick="location.href='index.html'"> Home </div>
+                        <div class=" listcell" onclick="location.href='games.html'"> Games </div>
+                        <div class=" listcell" onclick="location.href='about.html'"> About </div>
+                        <div class=" listcell selected" onclick="location.href='contact.html'"> Contact </div>
+                    </div>
+                <div class="Row">
+                    <div class="ContentCell">
+                        <div class="contentTable">
+                            <div class="Row">
+                                <form name="form1" ACTION="http://juhax.com/dotnet/kontakt2/contact.php" METHOD="post">
+                                    <h1>contact us</h1>
+                                    <div ="ContentCell"> <p1>Name:</p1></div>
+                                    <div ="ContentCell"><input type="text" name="name"></div>
+                                    <div ="ContentCell"><p1>E-mail:</p1></div>
+                                    <div ="ContentCell"><input type="email" name="email"></div>
+                                    <div ="ContentCell"><p1>Password:</p1></div>
+                                    <div ="ContentCell"><input type="password" name="password"></div><br>
+                                    <textarea name="message" cols="110" ROWS="6"  style="width:40%"></textarea><br>             
+                                    <input TYPE="submit" name="skicka" VALUE="Send message" style="background: green; color: white">
+                                    <input TYPE="reset" name="Rensa" VALUE="Clear" style="background: red; color: white">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Row">
+                    <div class="FooterCell">
+                        <p class="time" id="timerAmPm">  </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="list">
-            <div class=" listcell" onclick="location.href='index.html'"> Home </div>
-            <div class=" listcell" onclick="location.href='games.html'"> Games </div>
-            <div class=" listcell" onclick="location.href='about.html'"> About </div>
-            <div class=" listcell selected" onclick="location.href='contact.html'"> Contact </div>
-        </div>
-    <div class="Row">
-        <div class="ContentCell">
-            <form action="contactMessage.html" method="">
-                Name: <input type="text" name="name" size="25"><br>
-                Email: <input type="email" name="email" size="25" /><br>
-                Comment:<br> <textarea name="myTextBox" cols="50" rows="5"> </textarea> <br>
-                <input type="submit" value="Send" />
-                <input type="reset" name="reset" value="Reset">
-            </form>
+            <br>
+            <br>
         </div>
     </div>
-    <div class="Row">
-        <div class="FooterCell">
-            <p class="time" id="timerAmPm">  </p>
-        </div>
-    </div>
-    </div>
-    <br>
-<br>
-    </div>
-        </div>
 </body>
 </html>

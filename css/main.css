@@ -66,6 +66,15 @@ filter: none;
 
 }
 
+.contentTable {
+    position: relative;
+    display: table;
+    width: 100%;
+    z-index: 6;
+}
+input{
+    border-radius: 10vh;
+}
 .Row {
     display: table-row;
     vertical-align: center;
