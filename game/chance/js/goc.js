@@ -1,7 +1,9 @@
 var bankroll = 10;
+var highscore = 0;
 
 function mainGame() {
     document.getElementById("bankroll").innerText = bankroll;
+    document.getElementById("highscore").innerText = highscore;
 }
 
 function bet() {
@@ -9,7 +11,16 @@ function bet() {
 }
 
 function stay() {
-
+    if (bankroll >= highscore)
+    {
+        highscore = bankroll;
+        bankroll = 10;
+    }
+    else
+    {
+        bankroll = 10;
+    }
+    mainGame();
 }
 
 function win() {
