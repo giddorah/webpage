@@ -10,8 +10,8 @@ if(2*halfway%2!=0)
      halfway -= 0.5;
 // var width = 5;
 // var height = 5;
-var mouseWidth = 5;
-var mouseHeight = 5;
+var mouseWidth = 1;
+var mouseHeight = 1;
 // Arrayn count håller reda på värdena av alla rutor
 var count = new Array(width*height);
 
